@@ -77,4 +77,16 @@ static void my_book_init(MyBook *self)
 {
 }
 
+void my_book_print(MyBook *self)
+{
+	gchar *title;
+	g_object_get(G_OBJECT(self),
+			"title",&title,
+			NULL);
+	
+	g_printf("Title:%s\n",title);
+
+	g_free(title);
+}
+
 
