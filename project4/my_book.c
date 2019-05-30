@@ -8,9 +8,6 @@ enum PROPERTY_BOOK
 {
 	PROPERTY_0,
 	PROPERTY_TITLE,
-	PROPERTY_AUTHOR,
-	PROPERTY_PUBLISHER,
-	PORPERTY_YEAR,
 	N_PROPERTIES
 };
 
@@ -18,9 +15,6 @@ typedef struct _MyBookPrivate MyBookPrivate;
 struct _MyBookPrivate
 {
 	GString *title;
-	GString *author;
-	GString *Publisher;
-	guint year;
 };
 
 static void my_book_set_property(GObject*object,guint property_id,const GValue *value,GParamSpec *pspec)
@@ -70,7 +64,7 @@ static void my_book_class_init(MyBookClass *klass)
 				"Bibliography title",
 				NULL,
 				G_PARAM_READWRITE);
-	g_object_class_install_properties(base_class,2,properties);
+	g_object_class_install_properties(base_class,N_PROPERTIES,properties);
 }
 
 static void my_book_init(MyBook *self)
