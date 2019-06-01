@@ -22,4 +22,6 @@ struct _MyBookClass
 
 GType my_book_get_type(void);
 
+void my_book_print(MyBook *self);
+
 #endif
