@@ -9,7 +9,7 @@
 
 #define STORY_BOOK_GET_PRIVATE(object) G_TYPE_INSTANCE_GET_PRIVATE((object),STORY_TYPE_BOOK,StoryBookPrivate)
 
-type struct _StoryBookPrivate StoryBookPrivate;
+typedef struct _StoryBookPrivate StoryBookPrivate;
 struct _StoryBookPrivate
 {
 	char *author;

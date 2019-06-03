@@ -1,4 +1,4 @@
-#include"my_book.h"
+#include"story_book.h"
 int main(void)
 {
 	g_type_init();
